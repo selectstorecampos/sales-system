@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="pt-BR">
 	<head>
@@ -8,8 +9,8 @@
 
 		<style>
 			/* =========================================================
-   CONFIGURAÇÃO GERAL
-========================================================= */
+			   CONFIGURAÇÃO GERAL
+			========================================================= */
 
 			* {
 				box-sizing: border-box;
@@ -33,8 +34,8 @@
 			}
 
 			/* =========================================================
-   MENU LATERAL
-========================================================= */
+			   MENU LATERAL
+			========================================================= */
 
 			.sidebar {
 				position: fixed;
@@ -85,8 +86,8 @@
 			}
 
 			/* =========================================================
-   CONTEÚDO
-========================================================= */
+			   CONTEÚDO
+			========================================================= */
 
 			.main {
 				margin-left: 240px;
@@ -119,8 +120,8 @@
 			}
 
 			/* =========================================================
-   BOTÕES
-========================================================= */
+			   BOTÕES
+			========================================================= */
 
 			.primary {
 				background: #111;
@@ -148,8 +149,8 @@
 			}
 
 			/* =========================================================
-   CARDS
-========================================================= */
+			   CARDS
+			========================================================= */
 
 			.cards {
 				display: grid;
@@ -176,8 +177,8 @@
 			}
 
 			/* =========================================================
-   PAINÉIS
-========================================================= */
+			   PAINÉIS
+			========================================================= */
 
 			.panel {
 				background: white;
@@ -196,8 +197,8 @@
 			}
 
 			/* =========================================================
-   TABELAS
-========================================================= */
+			   TABELAS
+			========================================================= */
 
 			table {
 				width: 100%;
@@ -224,8 +225,8 @@
 			}
 
 			/* =========================================================
-   MODAIS
-========================================================= */
+			   MODAIS
+			========================================================= */
 
 			.modal {
 				display: none;
@@ -305,8 +306,8 @@
 			}
 
 			/* =========================================================
-   STATUS DO ESTOQUE
-========================================================= */
+			   STATUS DO ESTOQUE
+			========================================================= */
 
 			.status {
 				padding: 5px 9px;
@@ -325,8 +326,8 @@
 			}
 
 			/* =========================================================
-   COMPROVANTE
-========================================================= */
+			   COMPROVANTE
+			========================================================= */
 
 			.receipt {
 				background: #f7f7f5;
@@ -337,24 +338,56 @@
 				color: #111;
 			}
 
+			/* =========================================================
+			   LOGO DO COMPROVANTE
+			========================================================= */
+
+			.receipt-logo {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+			}
+
+			.logo-mark {
+				width: 44px;
+				height: 44px;
+				background: #111;
+				color: #fff;
+				border-radius: 12px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-weight: 900;
+				letter-spacing: -1px;
+			}
+
+			.logo-text strong {
+				display: block;
+				font-size: 25px;
+				font-weight: 900;
+				letter-spacing: 3px;
+				line-height: 1;
+			}
+
+			.logo-text span {
+				display: block;
+				font-size: 9px;
+				color: #777;
+				margin-top: 6px;
+				letter-spacing: 1.5px;
+			}
+
+			/* =========================================================
+			   CABEÇALHO DO COMPROVANTE
+			========================================================= */
+
 			.receipt-header {
 				display: flex;
 				justify-content: space-between;
-				border-bottom: 2px solid #111;
-				padding-bottom: 25px;
-			}
-
-			.receipt-company strong {
-				display: block;
-				font-size: 25px;
-				letter-spacing: 3px;
-			}
-
-			.receipt-company span {
-				display: block;
-				font-size: 10px;
-				color: #777;
-				margin-top: 4px;
+				align-items: flex-start;
+				border-bottom: 1px solid #d9d9d5;
+				padding-bottom: 22px;
 			}
 
 			.receipt-title {
@@ -382,12 +415,12 @@
 				padding: 13px;
 				margin-top: 20px;
 				font-size: 10px;
-				border-radius: 5px;
+				border-radius: 8px;
 			}
 
 			/* =========================================================
-   SEÇÕES DO COMPROVANTE
-========================================================= */
+			   SEÇÕES DO COMPROVANTE
+			========================================================= */
 
 			.section {
 				margin-top: 30px;
@@ -413,13 +446,13 @@
 			}
 
 			/* =========================================================
-   CAMPOS DO COMPROVANTE
-========================================================= */
+			   CAMPOS DO COMPROVANTE
+			========================================================= */
 
 			.info {
 				border: 1px solid #d8d8d5;
 				padding: 10px;
-				border-radius: 5px;
+				border-radius: 7px;
 				background: #fff;
 			}
 
@@ -435,16 +468,17 @@
 			}
 
 			/* =========================================================
-   PRODUTO
-========================================================= */
+			   PRODUTO
+			========================================================= */
 
 			.product-box {
 				border: 1px solid #d8d8d5;
 				background: #fff;
 				padding: 15px;
-				border-radius: 7px;
+				border-radius: 9px;
 				display: flex;
 				justify-content: space-between;
+				align-items: center;
 			}
 
 			.product-name {
@@ -465,28 +499,63 @@
 			}
 
 			/* =========================================================
-   TOTAL
-========================================================= */
+			   TOTAL DA VENDA
+			========================================================= */
 
 			.total {
-				margin-top: 25px;
-				border: 2px solid #111;
-				background: #fff;
-				padding: 15px;
+				margin-top: 28px;
+				padding: 18px 22px;
+				background: #111;
+				color: white;
+				border: none;
+				border-radius: 14px;
+
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				font-weight: 800;
-				border-radius: 5px;
+
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 			}
 
-			.total strong {
-				font-size: 23px;
+			.total-label {
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+			}
+
+			.total-label span {
+				font-size: 9px;
+				font-weight: 600;
+				letter-spacing: 1.5px;
+				text-transform: uppercase;
+				opacity: 0.65;
+			}
+
+			.total-label strong {
+				font-size: 14px;
+				font-weight: 700;
+			}
+
+			.total-value {
+				text-align: right;
+			}
+
+			.total-value small {
+				display: block;
+				font-size: 9px;
+				opacity: 0.6;
+				margin-bottom: 3px;
+			}
+
+			.total-value strong {
+				font-size: 25px;
+				font-weight: 900;
+				letter-spacing: -0.5px;
 			}
 
 			/* =========================================================
-   ASSINATURAS
-========================================================= */
+			   ASSINATURAS
+			========================================================= */
 
 			.signatures {
 				display: grid;
@@ -503,8 +572,8 @@
 			}
 
 			/* =========================================================
-   RODAPÉ DO COMPROVANTE
-========================================================= */
+			   RODAPÉ DO COMPROVANTE
+			========================================================= */
 
 			.receipt-footer {
 				margin-top: 70px;
@@ -517,8 +586,8 @@
 			}
 
 			/* =========================================================
-   RESPONSIVIDADE
-========================================================= */
+			   RESPONSIVIDADE
+			========================================================= */
 
 			@media (max-width: 900px) {
 				.sidebar {
@@ -575,8 +644,8 @@
 			}
 
 			/* =========================================================
-   IMPRESSÃO
-========================================================= */
+			   IMPRESSÃO
+			========================================================= */
 
 			@media print {
 				body {
@@ -603,6 +672,17 @@
 					margin: 0;
 					width: 210mm;
 					min-height: 297mm;
+					box-shadow: none;
+				}
+
+				.total {
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+
+				.logo-mark {
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
 				}
 			}
 		</style>
@@ -610,8 +690,8 @@
 
 	<body>
 		<!-- =======================================================
-     MENU
-======================================================= -->
+		     MENU
+		======================================================= -->
 
 		<aside class="sidebar">
 			<div class="logo">
@@ -630,13 +710,11 @@
 		</aside>
 
 		<!-- =======================================================
-     CONTEÚDO
-======================================================= -->
+		     CONTEÚDO
+		======================================================= -->
 
 		<main class="main">
-			<!-- =======================================================
-     DASHBOARD
-======================================================= -->
+			<!-- DASHBOARD -->
 
 			<section id="dashboard" class="page active">
 				<div class="header">
@@ -684,9 +762,7 @@
 				</div>
 			</section>
 
-			<!-- =======================================================
-     ESTOQUE
-======================================================= -->
+			<!-- ESTOQUE -->
 
 			<section id="estoque" class="page">
 				<div class="header">
@@ -708,9 +784,7 @@
 				</div>
 			</section>
 
-			<!-- =======================================================
-     VENDAS
-======================================================= -->
+			<!-- VENDAS -->
 
 			<section id="vendas" class="page">
 				<div class="header">
@@ -734,8 +808,8 @@
 		</main>
 
 		<!-- =======================================================
-     MODAL - PRODUTO
-======================================================= -->
+		     MODAL - PRODUTO
+		======================================================= -->
 
 		<div class="modal" id="productModal">
 			<div class="modal-box">
@@ -802,8 +876,8 @@
 		</div>
 
 		<!-- =======================================================
-     MODAL - VENDA
-======================================================= -->
+		     MODAL - VENDA
+		======================================================= -->
 
 		<div class="modal" id="saleModal">
 			<div class="modal-box">
@@ -878,8 +952,8 @@
 		</div>
 
 		<!-- =======================================================
-     MODAL - COMPROVANTE
-======================================================= -->
+		     MODAL - COMPROVANTE
+		======================================================= -->
 
 		<div class="modal" id="receiptModal">
 			<div class="modal-box">
@@ -899,8 +973,8 @@
 
 		<script>
 			/* =========================================================
-   CONFIGURAÇÃO DA EMPRESA
-========================================================= */
+			   CONFIGURAÇÃO DA EMPRESA
+			========================================================= */
 
 			const COMPANY = {
 				name: "Select Store",
@@ -913,20 +987,21 @@
 			};
 
 			/* =========================================================
-   DADOS
-========================================================= */
+			   DADOS
+			========================================================= */
 
 			let products = JSON.parse(localStorage.getItem("select_store_products")) || [];
 
 			let sales = JSON.parse(localStorage.getItem("select_store_sales")) || [];
 
 			/* =========================================================
-   UTILIDADES
-========================================================= */
+			   UTILIDADES
+			========================================================= */
 
 			function money(value) {
 				return new Intl.NumberFormat("pt-BR", {
 					style: "currency",
+
 					currency: "BRL",
 				}).format(Number(value) || 0);
 			}
@@ -946,8 +1021,8 @@
 			}
 
 			/* =========================================================
-   NAVEGAÇÃO
-========================================================= */
+			   NAVEGAÇÃO
+			========================================================= */
 
 			function showPage(page, button) {
 				document.querySelectorAll(".page").forEach((p) => p.classList.remove("active"));
@@ -964,8 +1039,8 @@
 			}
 
 			/* =========================================================
-   ESTOQUE
-========================================================= */
+			   ESTOQUE
+			========================================================= */
 
 			function openProduct() {
 				document.getElementById("productModal").classList.add("show");
@@ -1014,8 +1089,8 @@
 			}
 
 			/* =========================================================
-   NOVA VENDA
-========================================================= */
+			   NOVA VENDA
+			========================================================= */
 
 			function openSale() {
 				const available = products.filter((p) => p.status === "available");
@@ -1046,8 +1121,8 @@
 			}
 
 			/* =========================================================
-   PREÇO DA VENDA
-========================================================= */
+			   PREÇO DA VENDA
+			========================================================= */
 
 			function updateSalePrice() {
 				const select = document.getElementById("saleProduct");
@@ -1060,8 +1135,8 @@
 			}
 
 			/* =========================================================
-   SALVAR VENDA
-========================================================= */
+			   SALVAR VENDA
+			========================================================= */
 
 			function saveSale(event) {
 				event.preventDefault();
@@ -1112,8 +1187,8 @@
 			}
 
 			/* =========================================================
-   GERAR COMPROVANTE
-========================================================= */
+			   GERAR COMPROVANTE
+			========================================================= */
 
 			function showReceipt(sale) {
 				const product = products.find((p) => p.id === sale.productId);
@@ -1135,308 +1210,333 @@
 
 				document.getElementById("printArea").innerHTML = `
 
-        <div class="receipt">
+					<div class="receipt">
 
 
-            <!-- CABEÇALHO -->
+						<!-- CABEÇALHO -->
 
-            <div class="receipt-header">
+						<div class="receipt-header">
 
-                <div class="receipt-company">
 
-                    <strong>
-                        SELECT STORE
-                    </strong>
+							<div class="receipt-company">
 
-                    <span>
-                        Tecnologia • Confiança • Qualidade
-                    </span>
+								<div class="receipt-logo">
 
-                </div>
+									<div class="logo-mark">
+										SS
+									</div>
 
+									<div class="logo-text">
 
-                <div class="receipt-title">
+										<strong>
+											SELECT STORE
+										</strong>
 
-                    <strong>
-                        COMPROVANTE DE VENDA
-                    </strong>
+										<span>
+											TECNOLOGIA • CONFIANÇA • QUALIDADE
+										</span>
 
-                    <div>
-                        #${sale.number}
-                    </div>
+									</div>
 
-                    <span>
-                        ${dateText} ${timeText}
-                    </span>
+								</div>
 
-                </div>
+							</div>
 
-            </div>
 
+							<div class="receipt-title">
 
-            <!-- DADOS DA EMPRESA -->
+								<strong>
+									COMPROVANTE DE VENDA
+								</strong>
 
-            <div class="company-bar">
+								<div>
+									#${sale.number}
+								</div>
 
-                <strong>
-                    CNPJ:
-                </strong>
+								<span>
+									${dateText} ${timeText}
+								</span>
 
-                ${COMPANY.cnpj}
+							</div>
 
-                &nbsp;&nbsp;&nbsp;
 
-                <strong>
-                    Telefone:
-                </strong>
+						</div>
 
-                ${COMPANY.phone}
 
-                <br><br>
+						<!-- DADOS DA EMPRESA -->
 
-                <strong>
-                    Endereço:
-                </strong>
+						<div class="company-bar">
 
-                ${COMPANY.address}
+							<strong>
+								CNPJ:
+							</strong>
 
-            </div>
+							${COMPANY.cnpj}
 
+							&nbsp;&nbsp;&nbsp;
 
-            <!-- CLIENTE -->
+							<strong>
+								Telefone:
+							</strong>
 
-            <div class="section">
+							${COMPANY.phone}
 
-                <div class="section-title">
-                    DADOS DO CLIENTE
-                </div>
+							<br><br>
 
+							<strong>
+								Endereço:
+							</strong>
 
-                <div class="client-grid">
+							${COMPANY.address}
 
+						</div>
 
-                    <div class="info">
 
-                        <small>
-                            NOME
-                        </small>
+						<!-- CLIENTE -->
 
-                        <strong>
-                            ${escapeHtml(sale.clientName)}
-                        </strong>
+						<div class="section">
 
-                    </div>
+							<div class="section-title">
+								DADOS DO CLIENTE
+							</div>
 
 
-                    <div class="info">
+							<div class="client-grid">
 
-                        <small>
-                            CPF / CNPJ
-                        </small>
 
-                        <strong>
-                            ${escapeHtml(sale.clientDocument || "Não informado")}
-                        </strong>
+								<div class="info">
 
-                    </div>
+									<small>
+										NOME
+									</small>
 
+									<strong>
+										${escapeHtml(sale.clientName)}
+									</strong>
 
-                    <div class="info">
+								</div>
 
-                        <small>
-                            TELEFONE
-                        </small>
 
-                        <strong>
-                            ${escapeHtml(sale.clientPhone || "Não informado")}
-                        </strong>
+								<div class="info">
 
-                    </div>
+									<small>
+										CPF / CNPJ
+									</small>
 
+									<strong>
+										${escapeHtml(sale.clientDocument || "Não informado")}
+									</strong>
 
-                    <div class="info client-address">
+								</div>
 
-                        <small>
-                            ENDEREÇO
-                        </small>
 
-                        <strong>
-                            ${escapeHtml(sale.clientAddress || "Não informado")}
-                        </strong>
+								<div class="info">
 
-                    </div>
+									<small>
+										TELEFONE
+									</small>
 
+									<strong>
+										${escapeHtml(sale.clientPhone || "Não informado")}
+									</strong>
 
-                </div>
+								</div>
 
-            </div>
 
+								<div class="info client-address">
 
-            <!-- PRODUTO -->
+									<small>
+										ENDEREÇO
+									</small>
 
-            <div class="section">
+									<strong>
+										${escapeHtml(sale.clientAddress || "Não informado")}
+									</strong>
 
-                <div class="section-title">
-                    PRODUTO
-                </div>
+								</div>
 
 
-                <div class="product-box">
+							</div>
 
+						</div>
 
-                    <div>
 
-                        <div class="product-name">
+						<!-- PRODUTO -->
 
-                            ${escapeHtml(product.model)}
+						<div class="section">
 
-                        </div>
+							<div class="section-title">
+								PRODUTO
+							</div>
 
 
-                        <div>
+							<div class="product-box">
 
-                            ${escapeHtml(product.capacity)}
 
-                            •
+								<div>
 
+									<div class="product-name">
 
-                            ${escapeHtml(product.color || "—")}
+										${escapeHtml(product.model)}
 
-                        </div>
+									</div>
 
-                    </div>
 
+									<div>
 
-                    <div class="product-price">
+										${escapeHtml(product.capacity)}
 
-                        ${money(sale.price)}
+										•
 
-                    </div>
+										${escapeHtml(product.color || "—")}
 
+									</div>
 
-                </div>
+								</div>
 
 
-                <div class="product-details">
+								<div class="product-price">
 
+									${money(sale.price)}
 
-                    <div class="info">
+								</div>
 
-                        <small>
-                            IMEI / SERIAL
-                        </small>
 
-                        <strong>
-                            ${escapeHtml(product.imei)}
-                        </strong>
+							</div>
 
-                    </div>
 
+							<div class="product-details">
 
-                    <div class="info">
 
-                        <small>
-                            CAPACIDADE
-                        </small>
+								<div class="info">
 
-                        <strong>
-                            ${escapeHtml(product.capacity)}
-                        </strong>
+									<small>
+										IMEI / SERIAL
+									</small>
 
-                    </div>
+									<strong>
+										${escapeHtml(product.imei)}
+									</strong>
 
+								</div>
 
-                    <div class="info">
 
-                        <small>
-                            COR
-                        </small>
+								<div class="info">
 
-                        <strong>
-                            ${escapeHtml(product.color || "—")}
-                        </strong>
+									<small>
+										CAPACIDADE
+									</small>
 
-                    </div>
+									<strong>
+										${escapeHtml(product.capacity)}
+									</strong>
 
+								</div>
 
-                    <div class="info">
 
-                        <small>
-                            PAGAMENTO
-                        </small>
+								<div class="info">
 
-                        <strong>
-                            ${escapeHtml(sale.payment)}
-                        </strong>
+									<small>
+										COR
+									</small>
 
-                    </div>
+									<strong>
+										${escapeHtml(product.color || "—")}
+									</strong>
 
+								</div>
 
-                </div>
 
-            </div>
+								<div class="info">
 
+									<small>
+										PAGAMENTO
+									</small>
 
-            <!-- TOTAL -->
+									<strong>
+										${escapeHtml(sale.payment)}
+									</strong>
 
-            <div class="total">
+								</div>
 
-                <span>
-                    VALOR TOTAL
-                </span>
 
-                <strong>
-                    ${money(sale.price)}
-                </strong>
+							</div>
 
-            </div>
+						</div>
 
 
-            <!-- ASSINATURAS -->
+						<!-- TOTAL -->
 
-            <div class="signatures">
+						<div class="total">
 
-                <div class="signature">
+							<div class="total-label">
 
-                    Assinatura do cliente
+								<span>
+									Resumo da compra
+								</span>
 
-                </div>
+								<strong>
+									Valor total da venda
+								</strong>
 
+							</div>
 
-                <div class="signature">
 
-                    Select Store
+							<div class="total-value">
 
-                </div>
+								<small>
+									TOTAL
+								</small>
 
-            </div>
+								<strong>
+									${money(sale.price)}
+								</strong>
 
+							</div>
 
-            <!-- RODAPÉ -->
+						</div>
 
-            <div class="receipt-footer">
 
-                <strong>
-                    Obrigado pela preferência!
-                </strong>
+						<!-- ASSINATURAS -->
 
-                <span>
-                    ${COMPANY.phone}
-                </span>
+						<div class="signatures">
 
-            </div>
+							<div class="signature">
+								Assinatura do cliente
+							</div>
 
+							<div class="signature">
+								Select Store
+							</div>
 
-        </div>
+						</div>
 
-    `;
+
+						<!-- RODAPÉ -->
+
+						<div class="receipt-footer">
+
+							<strong>
+								Obrigado pela preferência!
+							</strong>
+
+							<span>
+								${COMPANY.phone}
+							</span>
+
+						</div>
+
+
+					</div>
+
+				`;
 
 				document.getElementById("receiptModal").classList.add("show");
 			}
 
 			/* =========================================================
-   IMPRIMIR COMPROVANTE
-========================================================= */
+			   IMPRIMIR COMPROVANTE
+			========================================================= */
 
 			function printReceipt() {
 				const content = document.getElementById("printArea").innerHTML;
@@ -1453,378 +1553,549 @@
 
 				printWindow.document.write(`
 
-<!DOCTYPE html>
+					<!DOCTYPE html>
 
-<html lang="pt-BR">
+					<html lang="pt-BR">
 
-<head>
+					<head>
 
-<meta charset="UTF-8">
+						<meta charset="UTF-8">
 
-<title>
-Comprovante Select Store
-</title>
+						<title>
+							Comprovante Select Store
+						</title>
 
 
-<style>
+						<style>
 
-@page {
-    size: A4;
-    margin: 0;
-}
+							@page {
+								size: A4;
+								margin: 0;
+							}
 
-* {
-    box-sizing: border-box;
-}
 
-body {
+							* {
+								box-sizing: border-box;
+							}
 
-    margin: 0;
 
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Arial,
-        sans-serif;
+							body {
 
-    background: white;
+								margin: 0;
 
-    color: #111;
+								font-family:
+									-apple-system,
+									BlinkMacSystemFont,
+									"Segoe UI",
+									Arial,
+									sans-serif;
 
-}
+								background: white;
 
-.receipt {
+								color: #111;
 
-    background: #f7f7f5;
+							}
 
-    width: 210mm;
 
-    min-height: 297mm;
+							.receipt {
 
-    padding: 18mm;
+								background: #f7f7f5;
 
-}
+								width: 210mm;
 
-.receipt-header {
+								min-height: 297mm;
 
-    display: flex;
+								padding: 18mm;
 
-    justify-content: space-between;
+							}
 
-    border-bottom: 2px solid #111;
 
-    padding-bottom: 25px;
+							/* LOGO */
 
-}
+							.receipt-logo {
 
-.receipt-company strong {
+								display: flex;
 
-    display: block;
+								align-items: center;
 
-    font-size: 25px;
+								gap: 12px;
 
-    letter-spacing: 3px;
+							}
 
-}
 
-.receipt-company span {
+							.logo-mark {
 
-    display: block;
+								width: 44px;
 
-    font-size: 10px;
+								height: 44px;
 
-    color: #777;
+								background: #111;
 
-    margin-top: 4px;
+								color: #fff;
 
-}
+								border-radius: 12px;
 
-.receipt-title {
+								display: flex;
 
-    text-align: right;
+								align-items: center;
 
-}
+								justify-content: center;
 
-.receipt-title strong {
+								font-size: 16px;
 
-    font-size: 12px;
+								font-weight: 900;
 
-    letter-spacing: 1px;
+								letter-spacing: -1px;
 
-}
+							}
 
-.receipt-title div {
 
-    font-size: 18px;
+							.logo-text strong {
 
-    font-weight: 800;
+								display: block;
 
-    margin-top: 5px;
+								font-size: 25px;
 
-}
+								font-weight: 900;
 
-.receipt-title span {
+								letter-spacing: 3px;
 
-    font-size: 10px;
+								line-height: 1;
 
-    color: #777;
+							}
 
-}
 
-.company-bar {
+							.logo-text span {
 
-    background: #eeeeec;
+								display: block;
 
-    padding: 13px;
+								font-size: 9px;
 
-    margin-top: 20px;
+								color: #777;
 
-    font-size: 10px;
+								margin-top: 6px;
 
-    border-radius: 5px;
+								letter-spacing: 1.5px;
 
-}
+							}
 
-.section {
 
-    margin-top: 30px;
+							/* CABEÇALHO */
 
-}
+							.receipt-header {
 
-.section-title {
+								display: flex;
 
-    font-size: 11px;
+								justify-content: space-between;
 
-    font-weight: 800;
+								align-items: flex-start;
 
-    letter-spacing: 1px;
+								border-bottom: 1px solid #d9d9d5;
 
-    border-bottom: 1px solid #d8d8d5;
+								padding-bottom: 22px;
 
-    padding-bottom: 8px;
+							}
 
-    margin-bottom: 12px;
 
-}
+							.receipt-title {
 
-.client-grid {
+								text-align: right;
 
-    display: grid;
+							}
 
-    grid-template-columns:
-        2fr 1fr 1fr;
 
-    gap: 8px;
+							.receipt-title strong {
 
-}
+								font-size: 12px;
 
-.client-address {
+								letter-spacing: 1px;
 
-    grid-column: 1 / -1;
+							}
 
-}
 
-.info {
+							.receipt-title div {
 
-    border: 1px solid #d8d8d5;
+								font-size: 18px;
 
-    padding: 10px;
+								font-weight: 800;
 
-    border-radius: 5px;
+								margin-top: 5px;
 
-    background: #fff;
+							}
 
-}
 
-.info small {
+							.receipt-title span {
 
-    display: block;
+								font-size: 10px;
 
-    color: #888;
+								color: #777;
 
-    font-size: 8px;
+							}
 
-    margin-bottom: 4px;
 
-}
+							.company-bar {
 
-.info strong {
+								background: #eeeeec;
 
-    font-size: 11px;
+								padding: 13px;
 
-}
+								margin-top: 20px;
 
-.product-box {
+								font-size: 10px;
 
-    border: 1px solid #d8d8d5;
+								border-radius: 8px;
 
-    background: #fff;
+							}
 
-    padding: 15px;
 
-    border-radius: 7px;
+							/* SEÇÕES */
 
-    display: flex;
+							.section {
 
-    justify-content: space-between;
+								margin-top: 30px;
 
-}
+							}
 
-.product-name {
 
-    font-size: 15px;
+							.section-title {
 
-    font-weight: 800;
+								font-size: 11px;
 
-}
+								font-weight: 800;
 
-.product-price {
+								letter-spacing: 1px;
 
-    font-size: 19px;
+								border-bottom: 1px solid #d8d8d5;
 
-    font-weight: 800;
+								padding-bottom: 8px;
 
-}
+								margin-bottom: 12px;
 
-.product-details {
+							}
 
-    display: grid;
 
-    grid-template-columns:
-        2fr 1fr 1fr 1fr;
+							/* CLIENTE */
 
-    gap: 8px;
+							.client-grid {
 
-    margin-top: 8px;
+								display: grid;
 
-}
+								grid-template-columns:
+									2fr 1fr 1fr;
 
-.total {
+								gap: 8px;
 
-    margin-top: 25px;
+							}
 
-    border: 2px solid #111;
 
-    background: #fff;
+							.client-address {
 
-    padding: 15px;
+								grid-column: 1 / -1;
 
-    display: flex;
+							}
 
-    justify-content: space-between;
 
-    align-items: center;
+							/* CAMPOS */
 
-    font-weight: 800;
+							.info {
 
-    border-radius: 5px;
+								border: 1px solid #d8d8d5;
 
-}
+								padding: 10px;
 
-.total strong {
+								border-radius: 7px;
 
-    font-size: 23px;
+								background: #fff;
 
-}
+							}
 
-.signatures {
 
-    display: grid;
+							.info small {
 
-    grid-template-columns:
-        1fr 1fr;
+								display: block;
 
-    gap: 70px;
+								color: #888;
 
-    margin-top: 100px;
+								font-size: 8px;
 
-    text-align: center;
+								margin-bottom: 4px;
 
-}
+							}
 
-.signature {
 
-    border-top: 1px solid #777;
+							.info strong {
 
-    padding-top: 8px;
+								font-size: 11px;
 
-    font-size: 9px;
+							}
 
-}
 
-.receipt-footer {
+							/* PRODUTO */
 
-    margin-top: 70px;
+							.product-box {
 
-    border-top: 1px solid #d8d8d5;
+								border: 1px solid #d8d8d5;
 
-    padding-top: 12px;
+								background: #fff;
 
-    display: flex;
+								padding: 15px;
 
-    justify-content: space-between;
+								border-radius: 9px;
 
-    color: #777;
+								display: flex;
 
-    font-size: 9px;
+								justify-content: space-between;
 
-}
+								align-items: center;
 
-</style>
+							}
 
-</head>
 
+							.product-name {
 
-<body>
+								font-size: 15px;
 
-${content}
+								font-weight: 800;
 
+							}
 
-<script>
 
-window.onload = function() {
+							.product-price {
 
-    setTimeout(
-        function() {
+								font-size: 19px;
 
-            window.print();
+								font-weight: 800;
 
-        },
-        300
-    );
+							}
 
-};
 
+							.product-details {
 
-window.onafterprint = function() {
+								display: grid;
 
-    setTimeout(
-        function() {
+								grid-template-columns:
+									2fr 1fr 1fr 1fr;
 
-            window.close();
+								gap: 8px;
 
-        },
-        300
-    );
+								margin-top: 8px;
 
-};
+							}
 
-<\/script>
 
+							/* TOTAL */
 
-</body>
+							.total {
 
-</html>
+								margin-top: 28px;
 
-    `);
+								padding: 18px 22px;
+
+								background: #111;
+
+								color: white;
+
+								border: none;
+
+								border-radius: 14px;
+
+								display: flex;
+
+								justify-content: space-between;
+
+								align-items: center;
+
+								box-shadow:
+									0 5px 15px
+									rgba(0, 0, 0, 0.08);
+
+								-webkit-print-color-adjust:
+									exact;
+
+								print-color-adjust:
+									exact;
+
+							}
+
+
+							.total-label {
+
+								display: flex;
+
+								flex-direction: column;
+
+								gap: 4px;
+
+							}
+
+
+							.total-label span {
+
+								font-size: 9px;
+
+								font-weight: 600;
+
+								letter-spacing: 1.5px;
+
+								text-transform: uppercase;
+
+								opacity: 0.65;
+
+							}
+
+
+							.total-label strong {
+
+								font-size: 14px;
+
+								font-weight: 700;
+
+							}
+
+
+							.total-value {
+
+								text-align: right;
+
+							}
+
+
+							.total-value small {
+
+								display: block;
+
+								font-size: 9px;
+
+								opacity: 0.6;
+
+								margin-bottom: 3px;
+
+							}
+
+
+							.total-value strong {
+
+								font-size: 25px;
+
+								font-weight: 900;
+
+								letter-spacing: -0.5px;
+
+							}
+
+
+							/* ASSINATURAS */
+
+							.signatures {
+
+								display: grid;
+
+								grid-template-columns:
+									1fr 1fr;
+
+								gap: 70px;
+
+								margin-top: 100px;
+
+								text-align: center;
+
+							}
+
+
+							.signature {
+
+								border-top: 1px solid #777;
+
+								padding-top: 8px;
+
+								font-size: 9px;
+
+							}
+
+
+							/* RODAPÉ */
+
+							.receipt-footer {
+
+								margin-top: 70px;
+
+								border-top:
+									1px solid #d8d8d5;
+
+								padding-top: 12px;
+
+								display: flex;
+
+								justify-content:
+									space-between;
+
+								color: #777;
+
+								font-size: 9px;
+
+							}
+
+
+						</style>
+
+					</head>
+
+
+					<body>
+
+						${content}
+
+
+						<script>
+
+							window.onload = function() {
+
+								setTimeout(
+
+									function() {
+
+										window.print();
+
+									},
+
+									300
+
+								);
+
+							};
+
+
+							window.onafterprint = function() {
+
+								setTimeout(
+
+									function() {
+
+										window.close();
+
+									},
+
+									300
+
+								);
+
+							};
+
+						<\/script>
+
+
+					</body>
+
+					</html>
+
+				`);
 
 				printWindow.document.close();
 			}
 
 			/* =========================================================
-   REIMPRIMIR VENDA ANTIGA
-========================================================= */
+			   REIMPRIMIR VENDA ANTIGA
+			========================================================= */
 
 			function printOldSale(idSale) {
 				const sale = sales.find((s) => s.id === idSale);
@@ -1835,8 +2106,8 @@ window.onafterprint = function() {
 			}
 
 			/* =========================================================
-   DASHBOARD
-========================================================= */
+			   DASHBOARD
+			========================================================= */
 
 			function updateDashboard() {
 				const available = products.filter((p) => p.status === "available");
@@ -1845,11 +2116,19 @@ window.onafterprint = function() {
 
 				document.getElementById("totalSales").textContent = sales.length;
 
-				const revenue = sales.reduce((sum, sale) => sum + Number(sale.price), 0);
+				const revenue = sales.reduce(
+					(sum, sale) => sum + Number(sale.price),
+
+					0,
+				);
 
 				document.getElementById("totalRevenue").textContent = money(revenue);
 
-				const stockValue = available.reduce((sum, product) => sum + Number(product.price), 0);
+				const stockValue = available.reduce(
+					(sum, product) => sum + Number(product.price),
+
+					0,
+				);
 
 				document.getElementById("stockValue").textContent = money(stockValue);
 
@@ -1858,381 +2137,357 @@ window.onafterprint = function() {
 				if (!recent.length) {
 					document.getElementById("recentSales").innerHTML = `
 
-            <div class="empty">
+						<div class="empty">
 
-                Nenhuma venda realizada.
+							Nenhuma venda realizada.
 
-            </div>
+						</div>
 
-        `;
+					`;
 
 					return;
 				}
 
 				document.getElementById("recentSales").innerHTML = `
 
-<table>
+					<table>
 
-<thead>
+						<thead>
 
-<tr>
+							<tr>
 
-<th>
-Data
-</th>
+								<th>
+									Data
+								</th>
 
-<th>
-Cliente
-</th>
+								<th>
+									Cliente
+								</th>
 
-<th>
-Produto
-</th>
+								<th>
+									Produto
+								</th>
 
-<th>
-Valor
-</th>
+								<th>
+									Valor
+								</th>
 
-<th>
-</th>
+								<th>
+								</th>
 
-</tr>
+							</tr>
 
-</thead>
-
-
-<tbody>
-
-${recent
-	.map((sale) => {
-		const product = products.find((p) => p.id === sale.productId);
-
-		return `
-
-<tr>
-
-<td>
-
-${new Date(sale.date).toLocaleDateString("pt-BR")}
-
-</td>
+						</thead>
 
 
-<td>
+						<tbody>
 
-${escapeHtml(sale.clientName)}
+							${recent
+								.map((sale) => {
+									const product = products.find((p) => p.id === sale.productId);
 
-</td>
+									return `
 
+											<tr>
 
-<td>
-
-${escapeHtml(product?.model || "")}
-
-</td>
-
-
-<td>
-
-<strong>
-
-${money(sale.price)}
-
-</strong>
-
-</td>
+												<td>
+													${new Date(sale.date).toLocaleDateString("pt-BR")}
+												</td>
 
 
-<td>
+												<td>
+													${escapeHtml(sale.clientName)}
+												</td>
 
-<button
-    class="secondary"
-    onclick="printOldSale('${sale.id}')"
->
 
-🖨 Imprimir
+												<td>
+													${escapeHtml(product?.model || "")}
+												</td>
 
-</button>
 
-</td>
+												<td>
 
-</tr>
+													<strong>
+														${money(sale.price)}
+													</strong>
 
-`;
-	})
-	.join("")}
+												</td>
 
-</tbody>
 
-</table>
+												<td>
 
-`;
+													<button
+														class="secondary"
+														onclick="printOldSale('${sale.id}')"
+													>
+														🖨 Imprimir
+													</button>
+
+												</td>
+
+											</tr>
+
+										`;
+								})
+								.join("")}
+
+						</tbody>
+
+					</table>
+
+				`;
 			}
 
 			/* =========================================================
-   TABELA DE ESTOQUE
-========================================================= */
+			   TABELA DE ESTOQUE
+			========================================================= */
 
 			function updateStock() {
 				if (!products.length) {
 					document.getElementById("stockTable").innerHTML = `
 
-            <div class="empty">
+						<div class="empty">
 
-                Nenhum produto cadastrado.
+							Nenhum produto cadastrado.
 
-            </div>
+						</div>
 
-        `;
+					`;
 
 					return;
 				}
 
 				document.getElementById("stockTable").innerHTML = `
 
-<table>
+					<table>
 
-<thead>
+						<thead>
 
-<tr>
+							<tr>
 
-<th>
-Produto
-</th>
+								<th>
+									Produto
+								</th>
 
-<th>
-IMEI / Serial
-</th>
+								<th>
+									IMEI / Serial
+								</th>
 
-<th>
-Preço
-</th>
+								<th>
+									Preço
+								</th>
 
-<th>
-Status
-</th>
+								<th>
+									Status
+								</th>
 
-</tr>
+							</tr>
 
-</thead>
-
-
-<tbody>
-
-${products
-	.map(
-		(product) => `
-
-<tr>
-
-<td>
-
-<strong>
-
-${escapeHtml(product.model)}
-
-</strong>
-
-<br>
-
-<small>
-
-${escapeHtml(product.capacity)}
-
-•
-
-${escapeHtml(product.color || "—")}
-
-</small>
-
-</td>
+						</thead>
 
 
-<td>
+						<tbody>
 
-${escapeHtml(product.imei)}
+							${products
+								.map(
+									(product) => `
 
-</td>
+										<tr>
+
+											<td>
+
+												<strong>
+													${escapeHtml(product.model)}
+												</strong>
+
+												<br>
+
+												<small>
+
+													${escapeHtml(product.capacity)}
+
+													•
+
+													${escapeHtml(product.color || "—")}
+
+												</small>
+
+											</td>
 
 
-<td>
-
-${money(product.price)}
-
-</td>
+											<td>
+												${escapeHtml(product.imei)}
+											</td>
 
 
-<td>
+											<td>
+												${money(product.price)}
+											</td>
 
-<span
-    class="status ${product.status === "available" ? "available" : "sold"}"
->
 
-${product.status === "available" ? "Em estoque" : "Vendido"}
+											<td>
 
-</span>
+												<span
+													class="status ${product.status === "available" ? "available" : "sold"}"
+												>
 
-</td>
+													${product.status === "available" ? "Em estoque" : "Vendido"}
 
-</tr>
+												</span>
 
-`,
-	)
-	.join("")}
+											</td>
 
-</tbody>
+										</tr>
 
-</table>
+									`,
+								)
+								.join("")}
 
-`;
+						</tbody>
+
+					</table>
+
+				`;
 			}
 
 			/* =========================================================
-   TABELA DE VENDAS
-========================================================= */
+			   TABELA DE VENDAS
+			========================================================= */
 
 			function updateSales() {
 				if (!sales.length) {
 					document.getElementById("salesTable").innerHTML = `
 
-            <div class="empty">
+						<div class="empty">
 
-                Nenhuma venda realizada.
+							Nenhuma venda realizada.
 
-            </div>
+						</div>
 
-        `;
+					`;
 
 					return;
 				}
 
 				document.getElementById("salesTable").innerHTML = `
 
-<table>
+					<table>
 
-<thead>
+						<thead>
 
-<tr>
+							<tr>
 
-<th>
-Venda
-</th>
+								<th>
+									Venda
+								</th>
 
-<th>
-Data
-</th>
+								<th>
+									Data
+								</th>
 
-<th>
-Cliente
-</th>
+								<th>
+									Cliente
+								</th>
 
-<th>
-Produto
-</th>
+								<th>
+									Produto
+								</th>
 
-<th>
-Valor
-</th>
+								<th>
+									Valor
+								</th>
 
-<th>
-</th>
+								<th>
+								</th>
 
-</tr>
+							</tr>
 
-</thead>
-
-
-<tbody>
-
-${sales
-	.map((sale) => {
-		const product = products.find((p) => p.id === sale.productId);
-
-		return `
-
-<tr>
-
-<td>
-
-#${sale.number}
-
-</td>
+						</thead>
 
 
-<td>
+						<tbody>
 
-${new Date(sale.date).toLocaleString("pt-BR")}
+							${sales
+								.map((sale) => {
+									const product = products.find((p) => p.id === sale.productId);
 
-</td>
+									return `
 
+											<tr>
 
-<td>
-
-${escapeHtml(sale.clientName)}
-
-</td>
-
-
-<td>
-
-${escapeHtml(product?.model || "")}
-
-</td>
+												<td>
+													#${sale.number}
+												</td>
 
 
-<td>
-
-<strong>
-
-${money(sale.price)}
-
-</strong>
-
-</td>
+												<td>
+													${new Date(sale.date).toLocaleString("pt-BR")}
+												</td>
 
 
-<td>
+												<td>
+													${escapeHtml(sale.clientName)}
+												</td>
 
-<button
-    class="secondary"
-    onclick="printOldSale('${sale.id}')"
->
 
-🖨 Reimprimir
+												<td>
+													${escapeHtml(product?.model || "")}
+												</td>
 
-</button>
 
-</td>
+												<td>
 
-</tr>
+													<strong>
+														${money(sale.price)}
+													</strong>
 
-`;
-	})
-	.join("")}
+												</td>
 
-</tbody>
 
-</table>
+												<td>
 
-`;
+													<button
+														class="secondary"
+														onclick="printOldSale('${sale.id}')"
+													>
+														🖨 Reimprimir
+													</button>
+
+												</td>
+
+											</tr>
+
+										`;
+								})
+								.join("")}
+
+						</tbody>
+
+					</table>
+
+				`;
 			}
 
 			/* =========================================================
-   SEGURANÇA BÁSICA CONTRA HTML
-========================================================= */
+			   SEGURANÇA BÁSICA CONTRA HTML
+			========================================================= */
 
 			function escapeHtml(value) {
 				return String(value ?? "")
 					.replaceAll("&", "&amp;")
+
 					.replaceAll("<", "&lt;")
+
 					.replaceAll(">", "&gt;")
+
 					.replaceAll('"', "&quot;")
+
 					.replaceAll("'", "&#039;");
 			}
 
 			/* =========================================================
-   ATUALIZAÇÃO GERAL
-========================================================= */
+			   ATUALIZAÇÃO GERAL
+			========================================================= */
 
 			function refresh() {
 				updateDashboard();
@@ -2243,10 +2498,11 @@ ${money(sale.price)}
 			}
 
 			/* =========================================================
-   INICIALIZAÇÃO
-========================================================= */
+			   INICIALIZAÇÃO
+			========================================================= */
 
 			refresh();
 		</script>
 	</body>
 </html>
+```
